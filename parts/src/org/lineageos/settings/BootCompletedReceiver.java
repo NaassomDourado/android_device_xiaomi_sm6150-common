@@ -37,9 +37,12 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        
+
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+
+        KcalUtils.writeCurrentSettings(sharedPrefs);
+
         DozeUtils.onBootCompleted(context);
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
