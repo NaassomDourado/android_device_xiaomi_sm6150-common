@@ -46,18 +46,23 @@ public class KcalSettingsFragment extends PreferenceFragment implements
     private SeekBarPreference mBlueColorSlider;
     private SeekBarPreference mSaturationSlider;
     private SeekBarPreference mContrastSlider;
+    private Preference mResetButton;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.kcal_settings);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
+        mKcalSwitchPreference = (SwitchPreference) findPreference("kcal_enable");
+        mResetButton = (Preference) findPreference("reset_default_button");
+
         // Check if the node exists and enable / disable the preference depending on the case
-        if (FileUtils.fileExists(KcalUtils.KCAL_ENABLE_NODE)) {
+        if (KcalUtils.isKcalSupported()) {
             configurePreferences();
         } else {
             mKcalSwitchPreference.setEnabled(false);
+            mKcalSwitchPreference.setSummary(getString(R.string.kcal_not_supported));
+            mResetButton.setEnabled(false);
         }
     }
 
@@ -102,20 +107,19 @@ public class KcalSettingsFragment extends PreferenceFragment implements
 
     // Configure the switches, preferences and sliders
     private void configurePreferences() {
-        mKcalSwitchPreference = (SwitchPreference) findPreference("kcal_enable");
         mKcalSwitchPreference.setEnabled(true);
         mKcalSwitchPreference.setOnPreferenceChangeListener(this);
+        mKcalSwitchPreference = (SwitchPreference) findPreference("kcal_enable");
+        mResetButton = (Preference) findPreference("reset_default_button");
 
         // Set the preference so it resets all the other preference's values, and applies the configuration on click
-        Preference resetButton = findPreference("reset_default_button");
-        resetButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        mResetButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 SharedPreferences.Editor editor = mSharedPrefs.edit();
                 editor.clear();
                 editor.commit();
                 getPreferenceScreen().removeAll();
-                addPreferencesFromResource(R.xml.kcal_settings);
                 configurePreferences();
                 KcalUtils.writeCurrentSettings(mSharedPrefs);
                 configurePreferences();
