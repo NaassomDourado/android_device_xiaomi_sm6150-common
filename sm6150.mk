@@ -162,9 +162,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
-
 # ParanoidDoze
 PRODUCT_PACKAGES += \
     ParanoidDoze
@@ -194,6 +191,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     media-legacy \
+    overlay \
     perf \
     telephony \
     wlan
@@ -256,7 +254,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    WifiOverlay
+    WifiResTarget
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
