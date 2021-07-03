@@ -31,6 +31,7 @@ import android.util.Log;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
