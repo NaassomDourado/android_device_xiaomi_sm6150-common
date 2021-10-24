@@ -106,8 +106,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-$(call inherit-product, vendor/miuicamera/config.mk)
-
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -399,4 +397,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/Mi.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Mi.ogg \
     $(LOCAL_PATH)/media/MIX.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/MIX.ogg \
     $(LOCAL_PATH)/media/MiRemix.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/MiRemix.ogg
-
