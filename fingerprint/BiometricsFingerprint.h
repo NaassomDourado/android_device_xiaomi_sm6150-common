@@ -88,6 +88,10 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
 #ifdef ENABLE_UDFPS
     android::base::unique_fd touch_fd_;
 #endif
+
+    // Methods from ::android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint follow.
+    Return<void> onShowUdfpsOverlay() override;
+    Return<void> onHideUdfpsOverlay() override;
 };
 
 }  // namespace implementation
