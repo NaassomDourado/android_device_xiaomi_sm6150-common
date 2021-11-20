@@ -1,3 +1,5 @@
+# Device proprietary files - from davinci MIUI V12.5.1.0.RFJCNXM package, unless pinned
+
 # ADSP - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/adsprpcd
 vendor/bin/cdsprpcd
@@ -13,7 +15,7 @@ vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
 
-# ADSP modules - from davinci MIUI V12.1.1.0.RFJEUXM
+# ADSP modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
@@ -46,10 +48,10 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+ - from davinci MIUI V12.1.1.0.RFJEUXM
+# ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio - from davinci MIUI V12.1.1.0.RFJEUXM
+# Audio
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -58,28 +60,28 @@ vendor/lib/libaudcal.so
 vendor/lib/libadm.so
 vendor/lib/libqtigef.so
 
-# Audio FX modules - from davinci MIUI V12.1.1.0.RFJEUXM
+# Audio FX modules
 vendor/lib/soundfx/libshoebox.so
 
-# Bluetooth - from davinci MIUI V12.1.1.0.RFJEUXM
+# Bluetooth
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 
-# Bluetooth (A2DP) - from davinci MIUI V12.1.1.0.RFJEUXM
+# Bluetooth (A2DP)
 vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 
-# Bluetooth (aptX) - from davinci MIUI V12.1.1.0.RFJEUXM
+# Bluetooth (aptX)
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
-# Bluetooth (Configstore) - from davinci MIUI V12.1.1.0.RFJEUXM
+# Bluetooth (Configstore)
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 
-# Bluetooth (SAR) - from davinci MIUI V12.1.1.0.RFJEUXM
+# Bluetooth (SAR)
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
@@ -87,7 +89,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 # Charger - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/hvdcp_opti
 
-# CNE - from davinci MIUI V12.1.1.0.RFJEUXM
+# CNE
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
@@ -113,7 +115,7 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
-# CNE configs - from davinci MIUI V12.1.1.0.RFJEUXM
+# CNE configs
 vendor/etc/cne/profileSlm.xml
 vendor/etc/cne/slm.conf
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -161,7 +163,7 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-# DPM - from davinci MIUI V12.1.1.0.RFJEUXM
+# DPM
 framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
@@ -181,7 +183,7 @@ vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM - from davinci MIUI V12.1.1.0.RFJEUXM
+# DRM
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
@@ -201,7 +203,7 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib64/libtrustedapploader.so
 
-# DRM widevine - from davinci MIUI V12.1.1.0.RFJEUXM
+# DRM widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
@@ -214,7 +216,7 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# FM - from davinci MIUI V12.1.1.0.RFJEUXM
+# FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 -system_ext/lib64/vendor.qti.hardware.fm@1.0.so
@@ -260,7 +262,7 @@ vendor/lib/libOpenCL.so
 vendor/lib/libpvr.so
 vendor/lib/libVkLayer_q3dtools.so
 
-# Gatekeeper - from davinci MIUI V12.1.1.0.RFJEUXM
+# Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -299,7 +301,7 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# IMS - from davinci MIUI V12.1.1.0.RFJEUXM
+# IMS
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -354,13 +356,13 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# IPA - from davinci MIUI V12.1.1.0.RFJEUXM
+# IPA
 vendor/etc/init/ipa_fws.rc
 
 # IRQ balance - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/msm_irqbalance
 
-# Keymaster - from davinci MIUI V12.1.1.0.RFJEUXM
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
@@ -368,7 +370,7 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
-# Listen - from davinci MIUI V12.1.1.0.RFJEUXM
+# Listen
 vendor/lib/hw/sound_trigger.primary.sm6150.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
@@ -444,10 +446,10 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# Power-off charging daemon - from davinci MIUI V12.1.1.0.RFJEUXM
+# Power-off charging daemon
 bin/charger:bin/chargeonlymode
 
-# QMI - from davinci MIUI V12.1.1.0.RFJEUXM
+# QMI
 system_ext/etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
@@ -480,7 +482,7 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
-# RIL - from davinci MIUI V12.1.1.0.RFJEUXM
+# RIL
 -system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/DeviceInfo/DeviceInfo.apk
 -system_ext/app/embms/embms.apk
@@ -567,7 +569,7 @@ vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
-# Soter - from davinci MIUI V12.1.1.0.RFJEUXM
+# Soter
 -app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -677,5 +679,5 @@ vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libwfdhdcpcp.so
 
-# Xiaomi MAC - from davinci MIUI V12.1.1.0.RFJEUXM
+# Xiaomi MAC
 vendor/bin/nv_mac
